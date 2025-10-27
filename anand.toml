@@ -1,0 +1,12 @@
+# build + redirects example
+[build]
+  publish = "dist1"          # output directory
+  command = "npm run build" # build command
+
+[context.production.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/webworldwebsite.html"
+  status = 200
