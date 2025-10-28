@@ -370,42 +370,42 @@ body, html {height: 100%}
 
                 // Here you would integrate with an SMS/MMS API to actually send the message and images
                 // Load environment variables from .env file
-require('dotenv').config();
+//require('dotenv').config();
 
 // Require the Twilio module and initialize the client
-const twilio = require('twilio');
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
-const twilioPhoneNumber = process.env.TWILIO_PHONE_NUMBER;
+//const twilio = require('twilio');
+//const accountSid = process.env.TWILIO_ACCOUNT_SID;
+//const authToken = process.env.TWILIO_AUTH_TOKEN;
+//const twilioPhoneNumber = process.env.TWILIO_PHONE_NUMBER;
 
-const client = new twilio(accountSid, authToken);
+//const client = new twilio(accountSid, authToken);
 
 // Define the function to send the SMS
-const sendSms = async (phone, messageBody) => {
-  try {
-    const message = await client.messages.create({
-      body: messageBody,
-      to:'+18777804236', // Recipient's phone number
-      from: '+19706276048' , // Your Twilio phone number
-    });
-    console.log(`Message sent successfully. SID: ${message.sid}`);
-    return message;
-  } catch (error) {
-    console.error('Error sending message:', error);
-    throw error;
-  }
-};
+//const sendSms = async (phone, messageBody) => {
+  //try {
+   // const message = await client.messages.create({
+    //  body: messageBody,
+   //   to:'+18777804236', // Recipient's phone number
+    //  from: '+19706276048' , // Your Twilio phone number
+  //  });
+  //  console.log(`Message sent successfully. SID: ${message.sid}`);
+  //  return message;
+ // } catch (error) {
+  //  console.error('Error sending message:', error);
+  //  throw error;
+//  }
+// };
 
 // Example usage:
-const recipientNumber = '9435549751'; // Replace with the recipient's number
-const myMessage = 'Hello from your localhost! This is a test SMS via Twilio.';
+//const recipientNumber = '9435549751'; // Replace with the recipient's number
+//const myMessage = 'Hello from your localhost! This is a test SMS via Twilio.';
 
-sendSms(recipientNumber, myMessage);
-sendMessage(phone, fixedMsg, images);
+//sendSms(recipientNumber, myMessage);
+//sendMessage(phone, fixedMsg, images);
 
                 // Example: sendMessage(phone, fixedMsg, images);
-            };
-            card.appendChild(btn);
+          //  };
+           card.appendChild(btn);
         });
     }
 
@@ -492,24 +492,24 @@ sendMessage(phone, fixedMsg, images);
     function addOrderButtonsToMenu() {
         // Starters
         const starters = [
-            { name: "Tomato Soup", price: "$2.50" },
-            { name: "Chicken Salad", price: "$3.50" },
-            { name: "Bread and Butter", price: "$1.00" }
+            { name: "Tomato Soup", price: "Rs100" },
+            { name: "Chicken Salad", price: "Rs100" },
+            { name: "Bread and Butter", price: "Rs100" }
         ];
         // Main Courses
         const mains = [
-            { name: "Grilled Fish and Potatoes", price: "$8.50" },
-            { name: "Italian Pizza", price: "$5.50" },
-            { name: "Veggie Pasta", price: "$4.00" },
-            { name: "Chicken and Potatoes", price: "$6.50" },
-            { name: "Deluxe Burger", price: "$5.00" }
+            { name: "Grilled Fish and Potatoes", price: "Rs200" },
+            { name: "Italian Pizza", price: "Rs200" },
+            { name: "Veggie Pasta", price: "Rs200" },
+            { name: "Chicken and Potatoes", price: "Rs200" },
+            { name: "Deluxe Burger", price: "Rs200" }
         ];
         // Desserts
         const desserts = [
-            { name: "Fruit Salad", price: "$2.50" },
-            { name: "Brownie Ice cream", price: "$2.00" },
-            { name: "Chocolate Cake", price: "$4.00" },
-            { name: "Cheese", price: "$5.50" }
+            { name: "Fruit Salad", price: "Rs200" },
+            { name: "Brownie Ice cream", price: "Rs200" },
+            { name: "Chocolate Cake", price: "Rs200" },
+            { name: "Cheese", price: "Rs200" }
         ];
 
         // Add buttons to Starters
@@ -752,6 +752,7 @@ sendMessage(phone, fixedMsg, images);
 
 </body>
 </html>
+
 
 
 
