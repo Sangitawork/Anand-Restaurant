@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "vercel": "^48.2.9"
+    "vercel": "^48.2.9",
+    "netlify":""
   }
 }
